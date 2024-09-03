@@ -270,7 +270,7 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://sequelize.org/docs/v6/core-concepts/model-basics/)
 - Stackoverflow
     - (https://stackoverflow.com/)
-- UT Coding Bootcamp GitLab site
+- UT Coding Bootcamp GitLab site (Source code was from Week 14 class activities)
     - (https://git.bootcampcontent.com/University-of-Texas-at-Austin/UTA-VIRT-FSF-PT-05-2024-U-LOLC)
 - Visual Studio
     - (https://marketplace.visualstudio.com/items?itemName=jock.svg)
