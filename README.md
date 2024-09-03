@@ -47,6 +47,7 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://expressjs.com/en/guide/routing.html#express-router)
     - (https://expressjs.com/en/guide/writing-middleware.html)
     - (https://expressjs.com/en/4x/api.html)
+    - (https://expressjs.com/en/guide/using-middleware.html)
 - Get Bootstrap
     - (https://getbootstrap.com/)
 - Git-SCM.com
@@ -75,11 +76,17 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://coding-boot-camp.github.io/full-stack/render/deploy-with-render-and-postgresql)
     - (https://coding-boot-camp.github.io/full-stack/computer-literacy/loopback-issues-with-localhost)
     - (https://coding-boot-camp.github.io/full-stack/render/deploy-with-render-and-postgresql)
+    - (https://github.com/expressjs/session#cookie)
 - GitLab
     - (https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
 - Google
     - (https://developer.chrome.com/docs/devtools/)
     - (https://fonts.google.com/)
+- Handlebarsjs.com
+    - (https://handlebarsjs.com/)
+    - (https://handlebarsjs.com/guide/expressions.html)
+    - (https://handlebarsjs.com/guide/builtin-helpers.html)
+    - (https://handlebarsjs.com/guide/partials.html#basic-partials)
 - Javascript.info
     - (https://javascript.info/class-inheritance#overriding-a-method)
 - Jest
@@ -192,6 +199,7 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
     - (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
     - (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+    - (https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 - Microsoft
     - (https://github.com/microsoft/vscode)
 - Mimo
@@ -208,6 +216,13 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://www.npmjs.com/package/dotenv)
     - (https://www.npmjs.com/package/bcrypt)
     - (https://www.npmjs.com/package/sequelize)
+    - (https://www.npmjs.com/package/express-handlebars)
+    - (https://www.npmjs.com/package/express-handlebars#helpers)
+    - (https://www.npmjs.com/package/express-session)
+    - (https://www.npmjs.com/package/connect-session-sequelize)
+    - (https://www.npmjs.com/package/handlebars)
+    - (https://www.npmjs.com/package/prettier)
+    - (https://www.npmjs.com/package/eslint-config-prettier)
 - Node
     - (https://node.readthedocs.io/en/latest/api/fs/)
 - Nodejs.org
@@ -237,6 +252,9 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://www.postgresql.org/docs/9.5/functions-aggregate.html)
     - (https://www.postgresql.org/docs/current/tutorial-join.html)
     - (https://www.postgresql.org/docs/current/tutorial-start.html)
+- Prettier
+    - (https://prettier.io/)
+    - (https://prettier.io/docs/en/index.html)
 - Render
     - (https://render.com/)
     - (https://docs.render.com/deploys)
@@ -249,6 +267,7 @@ This project is licensed under the [MIT license](https://opensource.org/license/
     - (https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
     - (https://sequelize.org/docs/v6/core-concepts/model-basics/#taking-advantage-of-models-being-classes)
     - (https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
+    - (https://sequelize.org/docs/v6/core-concepts/model-basics/)
 - Stackoverflow
     - (https://stackoverflow.com/)
 - UT Coding Bootcamp GitLab site
