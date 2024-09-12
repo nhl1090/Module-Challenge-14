@@ -1,3 +1,6 @@
 {{#each galleries as |gallery|}}
-{{> gallery-details}}
+  <p>Gallery Name: {{gallery.name}}</p>
+  {{> gallery-details}}
+{{else}}
+  <p>No galleries available.</p>
 {{/each}}
