@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
     );
 
     console.log("Session Data: ", req.session);
+    console.log("Logged In Status: ", req.session.loggedIn);
 
     // Pass loggedIn session variable to the view
     res.render('homepage', {
@@ -52,6 +53,7 @@ router.get('/gallery/:id', async (req, res) => {
     const gallery = dbGalleryData.get({ plain: true });
 
     console.log("Session Data: ", req.session);
+    console.log("Logged In Status: ", req.session.loggedIn);
 
     // Pass loggedIn session variable to the view
     res.render('gallery', { 
@@ -72,6 +74,7 @@ router.get('/painting/:id', async (req, res) => {
     const painting = dbPaintingData.get({ plain: true });
 
     console.log("Session Data: ", req.session);
+    console.log("Logged In Status: ", req.session.loggedIn);
 
     // Pass loggedIn session variable to the view
     res.render('painting', { 
@@ -91,6 +94,8 @@ router.get('/login', (req, res) => {
     return;
   }
   
+  console.log("Session Data: ", req.session);
+  console.log("Logged In Status: ", req.session.loggedIn);
   res.render('login', { 
     loggedIn: req.session.loggedIn || false 
   });
