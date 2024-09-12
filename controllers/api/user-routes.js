@@ -10,10 +10,13 @@ router.post('/', async (req, res) => {
       password: req.body.password,
     });
 
+    // Save session after creating user and logging them in
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
 
-      res.status(200).json(dbUserData);
+      res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
     console.log(err);
@@ -21,7 +24,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Login
+// Login route
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -46,16 +49,13 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    // Save session after successful login
     req.session.save(() => {
       req.session.loggedIn = true;
-      console.log(
-        'File: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
-        req.session.cookie
-      );
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+      res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
     console.log(err);
@@ -63,9 +63,10 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Logout
+// Logout route
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
+    // Destroy session when logging out
     req.session.destroy(() => {
       res.status(204).end();
     });

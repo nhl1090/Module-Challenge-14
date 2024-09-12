@@ -17,6 +17,9 @@ const sess = {
   cookie: {
     // Stored in milliseconds
     maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    secure: process.env.NODE_ENV === 'production', 
+    httpOnly: true,
+    sameSite: 'strict',
   },
   resave: false,
   saveUninitialized: true,

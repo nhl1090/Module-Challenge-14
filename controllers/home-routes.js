@@ -16,9 +16,13 @@ router.get('/', async (req, res) => {
     const galleries = dbGalleryData.map((gallery) =>
       gallery.get({ plain: true })
     );
+
+    console.log("Session Data: ", req.session);
+
+    // Pass loggedIn session variable to the view
     res.render('homepage', {
       galleries,
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn, // Ensure loggedIn is passed
     });
   } catch (err) {
     console.log(err);
@@ -46,7 +50,14 @@ router.get('/gallery/:id', async (req, res) => {
     });
 
     const gallery = dbGalleryData.get({ plain: true });
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+
+    console.log("Session Data: ", req.session);
+
+    // Pass loggedIn session variable to the view
+    res.render('gallery', { 
+      gallery, 
+      loggedIn: req.session.loggedIn  // Ensure loggedIn is passed
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,7 +70,14 @@ router.get('/painting/:id', async (req, res) => {
     const dbPaintingData = await Painting.findByPk(req.params.id);
 
     const painting = dbPaintingData.get({ plain: true });
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+
+    console.log("Session Data: ", req.session);
+
+    // Pass loggedIn session variable to the view
+    res.render('painting', { 
+      painting, 
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -72,7 +90,10 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login');
+  
+  res.render('login', { 
+    loggedIn: req.session.loggedIn || false 
+  });
 });
 
 module.exports = router;
