@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{gallery.name}} - Gallery</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>{{gallery.name}}</h1>
+  </header>
+
+  <main>
+    {{#if gallery.paintings.length}}
+      <section>
+        <h2>Paintings</h2>
+        <ul>
+          {{#each gallery.paintings}}
+            <li>
+              <h3>{{this.title}}</h3>
+              <p><strong>Artist:</strong> {{this.artist}}</p>
+              <p><strong>Description:</strong> {{this.description}}</p>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{else}}
+      <p>No paintings available for this gallery.</p>
+    {{/if}}
+  </main>
+</body>
+</html>

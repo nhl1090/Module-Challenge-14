@@ -1,4 +1,3 @@
-const User = require('./User');
 const Gallery = require('./Gallery');
 const Painting = require('./Painting');
 
@@ -10,4 +9,4 @@ Painting.belongsTo(Gallery, {
   foreignKey: 'gallery_id',
 });
 
-module.exports = { User, Gallery, Painting };
+module.exports = { Gallery, Painting, User };

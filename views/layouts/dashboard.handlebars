@@ -1,0 +1,32 @@
+{{!-- views/layouts/dashboard.handlebars --}}
+<h1>Dashboard</h1>
+
+<form id="new-post-form">
+  <input type="text" id="post-title" placeholder="Post Title" required>
+  <textarea id="post-content" placeholder="Write your post..." required></textarea>
+  <button type="submit">Create Post</button>
+</form>
+
+<section id="post-list">
+  {{#if posts.length}}
+    <h2>Your Posts</h2>
+    {{#each posts}}
+      <div class="post">
+        <h3>{{this.title}}</h3>
+        <p>{{this.content}}</p>
+        <button class="edit-btn" data-id="{{this.id}}">Edit</button>
+        <button class="delete-btn" data-id="{{this.id}}">Delete</button>
+      </div>
+    {{/each}}
+  {{else}}
+    <p>No posts yet. Start by creating one!</p>
+  {{/if}}
+</section>
+
+<form id="edit-post-form" class="hidden">
+  <input type="hidden" id="edit-post-id">
+  <input type="text" id="edit-post-title" required>
+  <textarea id="edit-post-content" required></textarea>
+  <button type="submit">Update Post</button>
+  <button type="button" id="cancel-edit">Cancel</button>
+</form>
